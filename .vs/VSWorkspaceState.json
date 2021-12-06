@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\SPMedicalGroup",
+    "\\backend\\SPMedicalGroup\\SPMedicalGroup",
+    "\\backend\\SPMedicalGroup\\SPMedicalGroup\\Controllers",
+    "\\backend\\SPMedicalGroup\\SPMedicalGroup\\Repositories",
+    "\\backend\\SPMedicalGroup\\SPMedicalGroup\\ViewModels"
+  ],
+  "SelectedNode": "\\backend\\SPMedicalGroup\\SPMedicalGroup.sln",
+  "PreviewInSolutionExplorer": false
+}
