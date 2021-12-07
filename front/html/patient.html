@@ -14,7 +14,7 @@
     <!-- HEADER -->
     <header>
         <div class="welcoming">
-            <a href="../html/homepage.html">Bom dia <span>Dr. John Doe</span></a>
+            <a>Bom dia <span>Dr. John Doe</span></a>
         </div>
         <div class="spmg">
             <a href="../html/homepage.html"><img src="../assets_/both/logo.png"></a>
@@ -27,27 +27,86 @@
         <div class="block_box">
             <div class="my_profile">
                 <p1>meu perfil</p1>
-                <div class="my_profile_block">
-                    <div class="my_profile_block_info">
-                        <a>nome:</a>
-                        <a>data de nascimento:</a>
-                        <a>RG:</a>
-                        <a>CPF:</a>
-                        <a>endereço:</a>
-                        <a>telefone:</a>
-
+                <div class="my_profile_card" onclick="flip(event)">
+                    <div class="my_profile_card_front">
+                        <img src="../assets_/site/card_front.png">
+                    </div>
+                    <div class="my_profile_card_back">
+                        <div class="my_profile_block_info_back">
+                            <a>nome:</a>
+                            <a>data de nascimento:</a>
+                            <a>RG:</a>
+                            <a>CPF:</a>
+                            <a>endereço:</a>
+                            <a>telefone:</a>
+                        </div>
+                        <div class="my_profile_block_lines">
+                            <div class="my_profile_block_blue_line"></div>
+                            <div class="my_profile_block_orange_line"></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="../js/patient.js"></script>
+                </div>
+                <img src="../assets_/site/patient.png" class="my_profile_patient_img ">
+            </div>
+            <div class="block_box_line"></div>
+            <div class="my_apps">
+                <p1>minhas consultas</p1>
+                <div class="next_ap_block">
+                    <div class="next_ap_block_info">
+                        <div class="next_ap_block_info_txt">
+                            <a>nome do médico:</a>
+                            <a>especialidade:</a>
+                            <a>data:</a>
+                            <a>situação:</a>
+                        </div>
+                    </div>
+                    <div class="next_ap_block_address">
+                        <a href="">endereço</a>
+                    </div>
+                    <div class="next_ap_block_lines">
+                        <div class="next_ap_block_blue_line"></div>
+                        <div class="next_ap_block_orange_line"></div>
+                    </div>
+                </div>
+                <div class="next_ap_block">
+                    <div class="next_ap_block_info">
+                        <div class="next_ap_block_info_txt">
+                            <a>nome do médico:</a>
+                            <a>especialidade:</a>
+                            <a>data:</a>
+                            <a>situação:</a>
+                        </div>
+                    </div>
+                    <div class="next_ap_block_address">
+                        <a href="">endereço</a>
+                    </div>
+                    <div class="next_ap_block_lines">
+                        <div class="next_ap_block_blue_line"></div>
+                        <div class="next_ap_block_orange_line"></div>
+                    </div>
+                </div>
+                <div class="next_ap_block">
+                    <div class="next_ap_block_info">
+                        <div class="next_ap_block_info_txt">
+                            <a>nome do médico:</a>
+                            <a>especialidade:</a>
+                            <a>data:</a>
+                            <a>situação:</a>
+                        </div>
+                    </div>
+                    <div class="next_ap_block_address">
+                        <a href="">endereço</a>
+                    </div>
+                    <div class="next_ap_block_lines">
+                        <div class="next_ap_block_blue_line"></div>
+                        <div class="next_ap_block_orange_line"></div>
                     </div>
                 </div>
 
-                <div class="my_profile_block_lines">
-                    <div class="my_profile_block_blue_line"></div>
-                    <div class="my_profile_block_orange_line"></div>
-                </div>
-
-
             </div>
+            
         </div>
-        <div class="block_box_line"></div>
     </div>
     </div>
 

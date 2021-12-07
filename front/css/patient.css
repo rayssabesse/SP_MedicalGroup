@@ -21,7 +21,7 @@ body {
 .block_box {
     background-color: #f9fbfc;
     width: 1280px;
-    height: 650px;
+    height: 80%;
     box-shadow: 0px 4px 60px rgba(161, 175, 174, 0.25);
     border-radius: 30px;
     margin-top: 100px;
@@ -32,7 +32,7 @@ body {
 
 .block_box_line {
     background-color: #859CD0;
-    height:auto;
+    height: auto;
     width: 5px;
 }
 
@@ -42,7 +42,7 @@ body {
     width: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .my_profile p1 {
@@ -53,6 +53,65 @@ body {
     align-self: center;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 23px;
+}
+
+.my_profile_card {
+    height: auto;
+    width: 320px;
+    transition: transform 1.2s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    flex-wrap: wrap;
+    align-self: center;
+    margin-bottom: 60%;
+}
+
+.my_profile_card_front,
+.my_profile_card_back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    bottom: auto;
+}
+
+.my_profile_card_front:hover{
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.my_profile_card_back:hover{
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.my_profile_card_front {
+    height: 192px;
+    width: 320px;
+    box-shadow: 0px 4px 60px rgba(161, 175, 174, 0.25);
+}
+
+.my_profile_card_front img {
+    height: 192px;
+    width: 320px;
+}
+
+.my_profile_card_back {
+    height: 192px;
+    width: 320px;
+    background-color: #162942;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform: rotateY(180deg);
 }
 
 .my_profile_block_lines {
@@ -62,9 +121,65 @@ body {
     display: flex;
 }
 
-.my_profile_block {
-    height: 240px;
-    width: 400px;
+.my_profile_block_blue_line {
+    height: 192px;
+    width: 5px;
+    background-color: #859CD0;
+    margin-right: 5px;
+}
+
+.my_profile_block_orange_line {
+    height: 192px;
+    width: 5px;
+    background-color: #DE5834;
+    margin-right: 40px;
+}
+
+.my_profile_block_info_back {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    align-items: flex-start;
+    margin-right: 160px;
+}
+
+.my_profile_block_info_back a {
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.my_profile_patient_img {
+    height: auto;
+    width: 300px;
+    align-self: center;
+}
+
+/* APPS */
+.my_apps {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.my_apps p1 {
+    font-family: 'Nunito', sans-serif;
+    color: #272C2C;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.next_ap_block {
+    height: 150px;
+    width: 720px;
     background-color: #162942;
     border-radius: 30px;
     display: flex;
@@ -72,24 +187,18 @@ body {
     align-items: center;
 }
 
-.my_profile_block_blue_line {
-    height: 240px;
-    width: 5px;
-    background-color: #859CD0;
-    margin-right: 5px;
-}
-
-.my_profile_block_orange_line {
-    height: 240px;
-    width: 5px;
-    background-color: #DE5834;
-    margin-right: 40px;
-}
-
-.my_profile_block_info {
+.next_ap_block_info {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.next_ap_block_info_txt {
+    display: flex;
     flex-direction: column;
     height: auto;
     width: auto;
@@ -97,10 +206,53 @@ body {
     margin-left: 25px;
 }
 
-.my_profile_block_info a {
+.next_ap_block_info_txt a {
     font-family: 'Nunito', sans-serif;
     color: #f9fbfc;
     font-size: 20px;
     font-weight: 600;
     text-transform: capitalize;
+}
+
+.next_ap_block_lines {
+    position: absolute;
+    top: auto;
+    left: auto;
+    display: flex;
+}
+
+.next_ap_block_blue_line {
+    height: 150px;
+    width: 5px;
+    background-color: #859CD0;
+    margin-right: 5px;
+}
+
+.next_ap_block_orange_line {
+    height: 150px;
+    width: 5px;
+    background-color: #DE5834;
+    margin-right: 40px;
+}
+
+.next_ap_block_address {
+    background-color: #4A64B8;
+    height: 110px;
+    width: 365px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 9;
+    margin-right: 25px;
+}
+
+.next_ap_block_address a {
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: none;
+    margin-top: 5%;
 }

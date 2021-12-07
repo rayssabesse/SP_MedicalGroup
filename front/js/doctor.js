@@ -1,3 +1,15 @@
+//DESCRIPTION
+window.onload=function()
+{
+    var el=document.getElementsByClassName('description_btn');
+    el.onclick=function(){
+        var my_text=prompt('Insira a descrição aqui');
+        if(my_text) alert(my_text);
+    }
+}
+
+
+// CLOCK
 function clock() {
     let date = new Date();
     let hrs = date.getHours();
