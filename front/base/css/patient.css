@@ -64,32 +64,7 @@ body {
     cursor: pointer;
     flex-wrap: wrap;
     align-self: center;
-    margin-bottom: 60%;
-}
-
-.my_profile_card_front,
-.my_profile_card_back {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    backface-visibility: hidden;
-    bottom: auto;
-}
-
-.my_profile_card_front:hover{
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-}
-
-.my_profile_card_back:hover{
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
+    margin-bottom: 70%;
 }
 
 .my_profile_card_front {
@@ -114,27 +89,6 @@ body {
     transform: rotateY(180deg);
 }
 
-.my_profile_block_lines {
-    position: absolute;
-    top: auto;
-    left: auto;
-    display: flex;
-}
-
-.my_profile_block_blue_line {
-    height: 192px;
-    width: 5px;
-    background-color: #859CD0;
-    margin-right: 5px;
-}
-
-.my_profile_block_orange_line {
-    height: 192px;
-    width: 5px;
-    background-color: #DE5834;
-    margin-right: 40px;
-}
-
 .my_profile_block_info_back {
     display: flex;
     justify-content: space-between;
@@ -151,6 +105,52 @@ body {
     font-size: 15px;
     font-weight: 600;
     text-transform: capitalize;
+}
+
+.my_profile_block_lines {
+    position: absolute;
+    top: auto;
+    left: auto;
+    display: flex;
+}
+
+.my_profile_card_front,
+.my_profile_card_back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    bottom: auto;
+}
+
+.my_profile_card_front:hover {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.my_profile_card_back:hover {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.my_profile_block_blue_line {
+    height: 192px;
+    width: 5px;
+    background-color: #859CD0;
+    margin-right: 5px;
+}
+
+.my_profile_block_orange_line {
+    height: 192px;
+    width: 5px;
+    background-color: #DE5834;
+    margin-right: 40px;
 }
 
 .my_profile_patient_img {
