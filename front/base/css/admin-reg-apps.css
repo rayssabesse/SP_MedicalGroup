@@ -169,3 +169,121 @@ body {
     cursor: pointer;
 }
 
+/* SEARCH AP */
+.search_ap {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search_ap a {
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 250%;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.search_ap input[type=text] {
+    width: 550px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    background-color: #4a64b8;
+    padding-left: 20px;
+}
+
+.search_ap input[type=text]::placeholder {
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    opacity: 70%;
+}
+
+.search_ap span {
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 150%;
+    font-weight: 700;
+    align-self: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.next_ap {
+    height: 50%;
+    width: 105%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.next_ap_row {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.next_ap_block {
+    height: 80px;
+    width: 345px;
+    border: 2px solid #4A64B8;
+    border-radius: 30px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.next_ap_block_txt {
+    height: auto;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.next_ap_block_txt a {
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.next_ap_block_cancel {
+    height: 30px;
+    width: 100px;
+    background-color: #4A64B8;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 80%;
+    text-transform: uppercase;
+    font-weight: 700;
+    z-index: 9;
+    cursor: pointer;
+    margin-right: 20px;
+}
