@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+/* Rule: font-family: 'Nunito', sans-serif; */
+
+/* PALLETE LINK: https://coolors.co/162942-4a64b8-859cd0-a7bcdc-de5834-f9fbfc-272c2c */
+
+body {
+    background-color: #859CD0;
+    display: flex;
+}
+
+.block {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.block_box {
+    background-color: #f9fbfc;
+    width: 1280px;
+    height: 80%;
+    box-shadow: 0px 4px 60px rgba(161, 175, 174, 0.25);
+    border-radius: 30px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.block_box_line {
+    background-color: #859CD0;
+    height: auto;
+    width: 5px;
+}
+
+/* PROFILE */
+.my_profile {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.my_profile p1 {
+    font-family: 'Nunito', sans-serif;
+    color: #272C2C;
+    font-size: 30px;
+    font-weight: 700;
+    align-self: center;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 23px;
+}
+
+.my_profile_card {
+    height: auto;
+    width: 320px;
+    transition: transform 1.2s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    flex-wrap: wrap;
+    align-self: center;
+    margin-bottom: 70%;
+}
+
+.my_profile_card_front {
+    height: 192px;
+    width: 320px;
+    box-shadow: 0px 4px 60px rgba(161, 175, 174, 0.25);
+}
+
+.my_profile_card_front img {
+    height: 192px;
+    width: 320px;
+}
+
+.my_profile_card_back {
+    height: 192px;
+    width: 320px;
+    background-color: #162942;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform: rotateY(180deg);
+}
+
+.my_profile_block_info_back {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    align-items: flex-start;
+    margin-right: 160px;
+}
+
+.my_profile_block_info_back a {
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.my_profile_block_lines {
+    position: absolute;
+    top: auto;
+    left: auto;
+    display: flex;
+}
+
+.my_profile_card_front,
+.my_profile_card_back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    bottom: auto;
+}
+
+.my_profile_card_front:hover {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.my_profile_card_back:hover {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.my_profile_block_blue_line {
+    height: 192px;
+    width: 5px;
+    background-color: #859CD0;
+    margin-right: 5px;
+}
+
+.my_profile_block_orange_line {
+    height: 192px;
+    width: 5px;
+    background-color: #DE5834;
+    margin-right: 40px;
+}
+
+.my_profile_patient_img {
+    height: auto;
+    width: 300px;
+    align-self: center;
+}
+
+/* APPS */
+.my_apps {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.my_apps p1 {
+    font-family: 'Nunito', sans-serif;
+    color: #272C2C;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.next_ap_block {
+    height: 150px;
+    width: 720px;
+    background-color: #162942;
+    border-radius: 30px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.next_ap_block_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.next_ap_block_info_txt {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    text-align: left;
+    margin-left: 25px;
+}
+
+.next_ap_block_info_txt a {
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.next_ap_block_lines {
+    position: absolute;
+    top: auto;
+    left: auto;
+    display: flex;
+}
+
+.next_ap_block_blue_line {
+    height: 150px;
+    width: 5px;
+    background-color: #859CD0;
+    margin-right: 5px;
+}
+
+.next_ap_block_orange_line {
+    height: 150px;
+    width: 5px;
+    background-color: #DE5834;
+    margin-right: 40px;
+}
+
+.next_ap_block_address {
+    background-color: #4A64B8;
+    height: 110px;
+    width: 365px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 9;
+    margin-right: 25px;
+}
+
+.next_ap_block_address a {
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-decoration: none;
+    margin-top: 5%;
+}

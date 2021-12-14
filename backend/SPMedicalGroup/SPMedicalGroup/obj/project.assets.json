@@ -7548,11 +7548,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\senai\\SPMedicalGroup\\backend\\SPMedicalGroup\\SPMedicalGroup\\SPMedicalGroup.csproj",
+      "projectUniqueName": "C:\\Users\\49472725899\\Desktop\\SP_MedicalGroup\\backend\\SPMedicalGroup\\SPMedicalGroup\\SPMedicalGroup.csproj",
       "projectName": "SPMedicalGroup",
-      "projectPath": "D:\\senai\\SPMedicalGroup\\backend\\SPMedicalGroup\\SPMedicalGroup\\SPMedicalGroup.csproj",
+      "projectPath": "C:\\Users\\49472725899\\Desktop\\SP_MedicalGroup\\backend\\SPMedicalGroup\\SPMedicalGroup\\SPMedicalGroup.csproj",
       "packagesPath": "C:\\Users\\49472725899\\.nuget\\packages\\",
-      "outputPath": "D:\\senai\\SPMedicalGroup\\backend\\SPMedicalGroup\\SPMedicalGroup\\obj\\",
+      "outputPath": "C:\\Users\\49472725899\\Desktop\\SP_MedicalGroup\\backend\\SPMedicalGroup\\SPMedicalGroup\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\49472725899\\AppData\\Roaming\\NuGet\\NuGet.Config",

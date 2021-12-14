@@ -1,13 +1,75 @@
+// IMPORTS
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route, BrowserRouter as Router, Redirect, Switch } from 'react-router-dom';
+
 import './index.css';
-import Home from './pages/homepage/App';
+
+import Home from './pages/home/App.jsx';
+import Login from './pages/login/login';
+import NotFound from './pages/not-found/not-found';
+
 import reportWebVitals from './reportWebVitals';
 
+import { parseJWT, userAuth } from './services/auth';
+
+// PERMISSIONS
+const permAdmin = ({ component: Component }) => (
+  <Route
+    render={(props) =>
+      userAuth() && parseJWT().role === '1' ? (
+        <Component {...props} />
+      ) : (
+        <Redirect to="login" />
+      )
+    }
+  />
+);
+const permDoctor = ({ component: Component }) => (
+  <Route
+    render={(props) =>
+      userAuth() && parseJWT().role === '2' ? (
+        <Component {...props} />
+      ) : (
+        <Redirect to="login" />
+      )
+    }
+  />
+);
+const permPatient = ({ component: Component }) => (
+  <Route
+    render={(props) =>
+      userAuth() && parseJWT().role === '3' ? (
+        <Component {...props} />
+      ) : (
+        <Redirect to="login" />
+      )
+    }
+  />
+);
+
+
+
+// ROUTING
+const routing = (
+  <Router>
+    <div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/login" component={Login}/>
+        <Route path="/not-found" component={NotFound} />
+        <Redirect to="/not-found" />
+      </Switch>
+    </div>
+  </Router>
+)
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  //   <Home />
+  // </React.StrictMode>,
+  routing,
   document.getElementById('root')
 );
 
@@ -15,3 +77,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
