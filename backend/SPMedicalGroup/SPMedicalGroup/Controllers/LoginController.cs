@@ -40,7 +40,10 @@ namespace SPMedicalGroup.Controllers
                 {
                     new Claim(JwtRegisteredClaimNames.Email, userSearched.EmailUser),
                     new Claim(JwtRegisteredClaimNames.Jti, userSearched.IdUser.ToString()),
-                    new Claim(ClaimTypes.Role, userSearched.IdUserType.ToString())
+                    new Claim(ClaimTypes.Role, userSearched.IdUserType.ToString()),
+                    new Claim( "role", userSearched.IdUserType.ToString() ),
+                     // Armazena na Claim o nome do usuário que foi autenticado
+                    //new Claim(JwtRegisteredClaimNames.Name, userSearched.NameUser)
                 };
 
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("spmedical-authentication-key"));

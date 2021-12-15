@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, useHistory } from 'react-router-dom';
 
-import '../../assets_/css/admin.css'
-import '../../assets_/css/global.css'
+import '../../assets_/css/admin.css';
+import '../../assets_/css/global.css';
+import '../admin-users/admin-users';
 import action_users from '../../assets_/site/users.png';
 import action_apps from '../../assets_/site/apps.png';
 import action_clinics from '../../assets_/site/clinics.png';
 import logo from '../../assets_/both/logo.png';
 
-export default function AdminApps() {
+export default function AdminDashboard() {
     const [list_Patients, setlistPatients] = useState([]);
     const [list_Doctors, setlistDoctors] = useState([]);
     const [list_Apps, setlistApps] = useState([]);
@@ -108,14 +109,17 @@ export default function AdminApps() {
                 <div className="welcoming">
                     <a>Bom dia <span>John Doe</span></a>
                 </div>
-                <div className="spmg">
-                    <img src={logo} />
-                    <a>sp medical group</a>
-                </div>
+                <Link to="/" onClick={logout}>
+                    <div className="spmg">
+                        <img src={logo} />
+                        <a>sp medical group</a>
+                    </div>
+                </Link>
+
             </header>
             <div className="block">
                 <div className="block_box">
-                    <div className="action_user">
+                    <div className="action_user" onClick={event => window.location.href='/admin-users'}>
                         <div className="action_txt">
                             <a>gerenciar usuários</a>
                         </div>
@@ -125,7 +129,8 @@ export default function AdminApps() {
                         </div>
                         <img className="action_img" src={action_users} />
                     </div>
-                    <div className="action_apps" onclick="location.href='../html/admin-apps.html'">
+
+                    <Link to="/admin-apps" className="action_apps">
                         <div className="action_txt">
                             <a>gerenciar consultas</a>
                         </div>
@@ -134,8 +139,9 @@ export default function AdminApps() {
                             <div className="action_block_orange_line"></div>
                         </div>
                         <img className="action_img" src={action_apps} />
-                    </div>
-                    <div className="action_clinics">
+                    </Link>
+
+                    <Link to="/admin-clinics" className="action_clinics">
                         <div className="action_txt">
                             <a>gerenciar clínicas</a>
                         </div>
@@ -144,7 +150,7 @@ export default function AdminApps() {
                             <div className="action_block_orange_line"></div>
                         </div>
                         <img className="action_img" src={action_clinics} />
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>

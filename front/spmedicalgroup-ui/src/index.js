@@ -4,12 +4,13 @@ import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router, Redirect, Switch } from 'react-router-dom';
 
 import './index.css';
-import adminApps from './pages/admin/admin';
 
 import Home from './pages/home/App.jsx';
 import Login from './pages/login/login';
-import AdminApps from './pages/admin/admin';
+import ManageApps from './pages/admin-apps/admin-apps';
+import AdminDashboard from './pages/admin/admin';
 import DoctorApps from './pages/doctor/doctor';
+import PatientApps from './pages/patient/patient'
 import NotFound from './pages/not-found/not-found';
 
 import reportWebVitals from './reportWebVitals';
@@ -17,7 +18,7 @@ import reportWebVitals from './reportWebVitals';
 import { parseJWT, userAuth } from './services/auth';
 
 // PERMISSIONS
-const permAdmin = ({ component: Component }) => (
+const PermAdmin = ({ component: Component }) => (
   <Route
     render={(props) =>
       userAuth() && parseJWT().role === '1' ? (
@@ -28,7 +29,7 @@ const permAdmin = ({ component: Component }) => (
     }
   />
 );
-const permDoctor = ({ component: Component }) => (
+const PermDoctor = ({ component: Component }) => (
   <Route
     render={(props) =>
       userAuth() && parseJWT().role === '2' ? (
@@ -39,7 +40,7 @@ const permDoctor = ({ component: Component }) => (
     }
   />
 );
-const permPatient = ({ component: Component }) => (
+const PermPatient = ({ component: Component }) => (
   <Route
     render={(props) =>
       userAuth() && parseJWT().role === '3' ? (
@@ -58,9 +59,9 @@ const routing = (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
-        <permAdmin path="/admin" component={AdminApps} />
-        <permDoctor path="/doctor" component={DoctorApps} />
-    
+        <PermAdmin path="/admin" component={AdminDashboard} />
+        <PermDoctor path="/doctor" component={DoctorApps} />
+        <PermPatient path="/patient" component={PatientApps} />
         <Route path="/not-found" component={NotFound} />
         <Redirect to="/not-found" />
       </Switch>

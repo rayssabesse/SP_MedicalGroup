@@ -3,8 +3,8 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 import { parseJWT, userAuth } from "../../services/auth";
 
-import '../../assets_/css/login.css'
-import '../../assets_/css/global.css'
+import '../../assets_/css/login.css';
+import '../../assets_/css/global.css';
 import logo from '../../assets_/both/logo.png';
 import goback from '../../assets_/site/back.png';
 import dudefromlogin from '../../assets_/site/login.png';
@@ -22,37 +22,44 @@ export default class Login extends Component {
 
     wLogin = (event) => {
         event.preventDefault();
-        console.log("api")
         this.setState({ errorMessage: '', isLoading: true })
-        axios.post('http://localhost:5000/api/Login', {
+        axios.post('http://localhost:5000/api/login', {
             email: this.state.email,
             password: this.state.password
         })
             .then(answer => {
                 if (answer.status === 200) {
-                    localStorage.setItem("user-login", answer.data.token);
+                    console.log('api')
+                    localStorage.setItem('user-login', answer.data.token);
                     this.setState({ isLoading: false });
 
-                    switch (parseJWT().role) {
-                        case 1:
+                    let base64 = localStorage.getItem('user-login').split('.')[1];
+
+                    console.log(base64);
+
+                    let value = parseJWT().role;
+
+                    switch (value) {
+                        case "1":
                             this.props.history.push("/admin")
                             console.log("Estou Logado: " + userAuth())
                             break;
-                        case 2:
+                        case "2":
                             this.props.history.push("/doctor")
                             console.log("Estou Logado: " + userAuth())
                             break;
-                        case 3:
+                        case "3":
                             this.props.history.push("/patient")
                             console.log("Estou Logado: " + userAuth())
                             break;
                         default:
                             this.props.history.push("/")
                             break;
-
                     }
                 }
-            }).catch(error => console.log(error), this.setState({ errorMessage: "Email e/ou Senha inválidos." }))
+            }).catch(() => {
+                this.setState({ errorMessage: 'E-mail e/ou senha inválidos', isLoading: false })
+            })
     }
 
     refreshStateField = (field) => {
@@ -95,13 +102,14 @@ export default class Login extends Component {
                             <div className="loginbtn">
                                 {
                                     this.state.isLoading === true &&
-                                    <button type="submit" disabled className="login_btn2">Loading...</button>
+                                    <button type="submit" disabled className="login_btn2">carregando...</button>
                                 }
                                 {
                                     this.state.isLoading === false &&
-                                    <button type="submit" disabled={this.state.email === '' || this.state.password === '' ? 'none' : ''} className="login_btn2">entrar</button>
+                                    <button type="button" disabled={this.state.email === '' || this.state.password === '' ? 'none' : ''} className="login_btn2" onClick={this.wLogin}>entrar</button>
                                 }
                             </div>
+                            <p style={{ color: 'red' }} >{this.state.errorMessage}</p>
                         </div>
                     </div>
                 </div>
