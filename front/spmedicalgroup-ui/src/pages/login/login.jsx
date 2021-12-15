@@ -3,8 +3,11 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 import { parseJWT, userAuth } from "../../services/auth";
 
-import "../../assets_/css/login.css"
-import { logo } from '../../assets_/both/logo.png';
+import '../../assets_/css/login.css'
+import '../../assets_/css/global.css'
+import logo from '../../assets_/both/logo.png';
+import goback from '../../assets_/site/back.png';
+import dudefromlogin from '../../assets_/site/login.png';
 
 export default class Login extends Component {
     constructor(props) {
@@ -52,12 +55,57 @@ export default class Login extends Component {
             }).catch(error => console.log(error), this.setState({ errorMessage: "Email e/ou Senha inválidos." }))
     }
 
-    RefreshStateField = (field) => {
-        this.setState({[field.target.name]: field.target.value})
+    refreshStateField = (field) => {
+        this.setState({ [field.target.name]: field.target.value })
     }
 
-    // ACHO QUE É O CSS
-    // render(){
-
-    // }
+    render() {
+        return (
+            <div>
+                <header>
+                    <Link to="/">
+                        <div className="spmgback">
+                            <img src={goback} />
+                        </div>
+                    </Link>
+                    <Link to="/">
+                        <div className="spmg">
+                            <img src={logo} />
+                            <a>sp medical group</a>
+                        </div>
+                    </Link>
+                </header>
+                <div className="block">
+                    <img src={dudefromlogin} className="body_img" />
+                    <div className="login_box">
+                        <div className="login_box_info">
+                            <div className="login_lines">
+                                <div className="login_box_blue_line"></div>
+                                <div className="login_box_orange_line"></div>
+                            </div>
+                        </div>
+                        <div className="login_info">
+                            <a>bem vindo</a>
+                            <div className="user_info">
+                                <span>email de usuário</span>
+                                <input type="email" name="email" value={this.state.email} onChange={this.refreshStateField} />
+                                <span>senha</span>
+                                <input type="password" name="password" value={this.state.password} onChange={this.refreshStateField} />
+                            </div>
+                            <div className="loginbtn">
+                                {
+                                    this.state.isLoading === true &&
+                                    <button type="submit" disabled className="login_btn2">Loading...</button>
+                                }
+                                {
+                                    this.state.isLoading === false &&
+                                    <button type="submit" disabled={this.state.email === '' || this.state.password === '' ? 'none' : ''} className="login_btn2">entrar</button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }

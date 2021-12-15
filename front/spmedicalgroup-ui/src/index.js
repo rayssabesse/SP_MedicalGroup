@@ -4,9 +4,12 @@ import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router, Redirect, Switch } from 'react-router-dom';
 
 import './index.css';
+import adminApps from './pages/admin/admin';
 
 import Home from './pages/home/App.jsx';
 import Login from './pages/login/login';
+import AdminApps from './pages/admin/admin';
+import DoctorApps from './pages/doctor/doctor';
 import NotFound from './pages/not-found/not-found';
 
 import reportWebVitals from './reportWebVitals';
@@ -48,15 +51,16 @@ const permPatient = ({ component: Component }) => (
   />
 );
 
-
-
 // ROUTING
 const routing = (
   <Router>
     <div>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/login" component={Login}/>
+        <Route path="/login" component={Login} />
+        <permAdmin path="/admin" component={AdminApps} />
+        <permDoctor path="/doctor" component={DoctorApps} />
+    
         <Route path="/not-found" component={NotFound} />
         <Redirect to="/not-found" />
       </Switch>

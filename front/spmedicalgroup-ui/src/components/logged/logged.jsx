@@ -11,7 +11,7 @@ export default function Analysis() {
             case "3":
                 return (<Link to="/patient">Paciente Dashboard</Link>)
             default:
-                return (<Link to="/">Consultas</Link>)
+                return (<Link to="/">Home Page</Link>)
         }
     } else {
         return <Link to="/login">Login</Link>

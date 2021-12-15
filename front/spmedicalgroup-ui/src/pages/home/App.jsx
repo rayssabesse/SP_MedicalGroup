@@ -1,7 +1,7 @@
+import { Link, Route } from 'react-router-dom';
+
 import '../../assets_/css/homepage.css';
 import '../../assets_/css/global.css';
-import { Link } from 'react-router-dom';
-
 import logo from '../../assets_/both/logo.png';
 import home from '../../assets_/site/home.png';
 import about_us from '../../assets_/site/about_us.png';
@@ -19,13 +19,14 @@ import './App.css';
 
 function App() {
   return (
-
     <div>
       <header>
-        <div className="spmg">
-          <img src={logo} />
-          <span>sp medical group</span>
-        </div>
+        <Link to="/">
+          <div className="spmg">
+            <img src={logo} />
+            <span>sp medical group</span>
+          </div>
+        </Link>
         <div className="menu">
           <span href="#home">home</span>
           <span href="#about_us">sobre nós</span>
@@ -132,6 +133,7 @@ function App() {
         <img src={contact} />
         <div className="cont_info">
           <a>contato</a>
+
           <div className="cont_box">
             <a>Clínica SENAI de Informática</a>
             <div className="cont_box_info_box">
@@ -143,6 +145,7 @@ function App() {
               </div>
             </div>
           </div>
+
           <div className="cont_box">
             <a>Clínica SENAI Roberto Simonsen</a>
             <div className="cont_box_info_box">
@@ -171,8 +174,7 @@ function App() {
         <a>sp medical group</a>
         <span>Copyright 2021 © Todos os direitos reservados.</span>
       </footer>
-
-    </div>
+    </div >
   );
 }
 

@@ -3,11 +3,16 @@
 
 /* PALLETE LINK: https://coolors.co/162942-4a64b8-859cd0-a7bcdc-de5834-f9fbfc-272c2c */
 
+body a {
+    text-decoration: none;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 /* HEADER */
 header {
@@ -40,6 +45,16 @@ header {
     cursor: pointer;
 }
 
+.spmg a {
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 20px;
+    font-weight: 700;
+    align-self: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .spmg span {
     font-family: 'Nunito', sans-serif;
     color: #f9fbfc;
@@ -54,6 +69,16 @@ header {
 .spmg img {
     height: 68px;
     width: auto;
+}
+
+.spmgback {
+    height: 40px;
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+    margin-right: 25px;
+    cursor: pointer;
 }
 
 .welcoming {
@@ -77,7 +102,7 @@ header {
     font-family: 'Nunito', sans-serif;
     color: #f9fbfc;
     font-size: 20px;
-    font-weight:bolder;
+    font-weight: bolder;
     align-self: center;
     text-align: center;
     text-transform: uppercase;
@@ -92,7 +117,7 @@ header {
     padding-right: 25px;
 }
 
-.menu a{
+.menu a {
     font-family: 'Nunito', sans-serif;
     color: #f9fbfc;
     font-size: 16.5px;
@@ -144,7 +169,7 @@ footer a {
     align-self: center;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 footer span {
