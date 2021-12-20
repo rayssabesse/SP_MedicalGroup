@@ -26,7 +26,10 @@ namespace SPMedicalGroup.Repositories
 
         public List<Appointment> ListAll()
         {
-            return ctx.Appointments.ToList();
+            return ctx.Appointments
+                .Include(a => a.IdPatientNavigation)
+                .Include(b => b.IdDoctorNavigation)
+                .ToList();
         }
 
         public void Refresh(int idAppointment, Appointment refreshAppointment)

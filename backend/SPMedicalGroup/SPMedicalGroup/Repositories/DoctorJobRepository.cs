@@ -22,7 +22,8 @@ namespace SPMedicalGroup.Repositories
 
         public List<DoctorJob> ListAll()
         {
-            return ctx.DoctorJobs.ToList();
+            return ctx.DoctorJobs
+                .ToList();
         }
 
         public List<DoctorJob> ListDoctors()

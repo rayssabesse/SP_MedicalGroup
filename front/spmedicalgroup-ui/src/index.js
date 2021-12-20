@@ -8,7 +8,6 @@ import './index.css';
 import Home from './pages/home/App.jsx';
 import Login from './pages/login/login';
 import ManageApps from './pages/admin-apps/admin-apps';
-import AdminDashboard from './pages/admin/admin';
 import DoctorApps from './pages/doctor/doctor';
 import PatientApps from './pages/patient/patient'
 import NotFound from './pages/not-found/not-found';
@@ -59,7 +58,7 @@ const routing = (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
-        <PermAdmin path="/admin" component={AdminDashboard} />
+        <PermAdmin path="/admin-apps" component={ManageApps} />
         <PermDoctor path="/doctor" component={DoctorApps} />
         <PermPatient path="/patient" component={PatientApps} />
         <Route path="/not-found" component={NotFound} />

@@ -19,7 +19,7 @@ namespace SPMedicalGroup.Domains
         public string CrmDoctor { get; set; }
         public string NameDoctor { get; set; }
 
-        public virtual Clinic IdClinicNavigation { get; set; }
+        public virtual Clinic IdClinicNavigation { get; set; }  
         public virtual DoctorJob IdDoctorJobNavigation { get; set; }
         public virtual Userr IdUserNavigation { get; set; }
         public virtual ICollection<Appointment> Appointments { get; set; }

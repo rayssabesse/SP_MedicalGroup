@@ -18,7 +18,7 @@ body {
     align-items: center;
 }
 
-.block_box {
+.block_box_doctor {
     background-color: #f9fbfc;
     width: 1280px;
     height: 80%;
@@ -42,7 +42,16 @@ body {
     width: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.patients_list_box {
+    height: 470px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .patients_list p1 {
@@ -63,24 +72,25 @@ body {
 }
 
 .patients_list_block {
-    height: 80px;
-    width: 400px;
+    height: 140px;
+    width: 370px;
     background-color: #162942;
     border-radius: 30px;
     display: flex;
     justify-content: right;
     align-items: center;
+    margin-top: 15px;
 }
 
 .patients_list_block_blue_line {
-    height: 80px;
+    height: 140px;
     width: 5px;
     background-color: #859CD0;
     margin-right: 5px;
 }
 
 .patients_list_block_orange_line {
-    height: 80px;
+    height: 140px;
     width: 5px;
     background-color: #DE5834;
     margin-right: 40px;
@@ -106,9 +116,26 @@ body {
 .patients_list_block_info_txt a {
     font-family: 'Nunito', sans-serif;
     color: #f9fbfc;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     text-transform: capitalize;
+}
+
+.textarea_doctor {
+    background-color: #4A64B8;
+    border-radius: 15px;
+    border: none;
+    resize: none;
+    height: 70px;
+    width: 200px;
+    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 70%;
+    text-transform: none;
+    font-weight: 700;
+    z-index: 9;
+    margin-top: 5px;
 }
 
 .description_btn {
@@ -129,137 +156,6 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
-}
-
-/* NEXT */
-.next_ap {
-    height: auto;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.next_ap p1 {
-    font-family: 'Nunito', sans-serif;
-    color: #272C2C;
-    font-size: 30px;
-    font-weight: 700;
-    align-self: center;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.next_ap_block {
-    height: 500px;
-    width: 360px;
-    background-color: #162942;
-    border-radius: 30px;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
-
-.next_ap_block_lines {
-    position: absolute;
-    top: auto;
-    left: auto;
-    display: flex;
-}
-
-.next_ap_block_blue_line {
-    height: 500px;
-    width: 5px;
-    background-color: #859CD0;
-    margin-right: 5px;
-}
-
-.next_ap_block_orange_line {
-    height: 500px;
-    width: 5px;
-    background-color: #DE5834;
-    margin-right: 40px;
-}
-
-.next_ap_block_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-    justify-content: space-evenly;
-}
-
-.next_ap_block_info_txt {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: auto;
-    text-align: left;
-    margin-left: 25px;
-}
-
-.next_ap_block_info_txt a {
-    font-family: 'Nunito', sans-serif;
-    color: #f9fbfc;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-.next_ap_description {
-    display: flex;
-    height: auto;
-    width: auto;
-    height: 130px;
-    width: 330px;
-    background-color: #4A64B8;
-    border-radius: 25px;
-    margin-left: 15px;
-    z-index: 9;
-}
-
-.next_ap_description p1 {
-    font-family: 'Nunito', sans-serif;
-    color: #f9fbfc;
-    font-size: 15px;
-    font-weight: 600;
-    padding-left: 15px;
-    padding-top: 15px;
-    text-transform: none;
-    align-self: flex-start;
-}
-
-textarea::placeholder {
-    color: #f9fbfc;
-}
-
-.next_ap_block_info_data {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: auto;
-    margin-right: 65px;
-}
-
-.next_ap_block_info_data a {
-    font-family: 'Nunito', sans-serif;
-    color: #f9fbfc;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.next_ap_block_info_data span {
-    font-family: 'Nunito', sans-serif;
-    color: #f9fbfc;
-    font-size: 18px;
-    font-weight: 400;
-    text-transform: capitalize;
-    text-align: left;
-    margin-left: 20px;
 }
 
 /* THIRD COLUMN */
@@ -313,8 +209,8 @@ textarea::placeholder {
 }
 
 /* IMG */
-.third_column_block img {
-    height: 300px;
+.third_column_block_img {
+    height: 40%;
     width: auto;
     display: flex;
     align-self: flex-end;
