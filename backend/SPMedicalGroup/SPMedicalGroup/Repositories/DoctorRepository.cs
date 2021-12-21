@@ -26,9 +26,22 @@ namespace SPMedicalGroup.Repositories
             return ctx.Doctors.ToList();
         }
 
-        public List<Doctor> ListAppointments()
+        public List<Appointment> ListAppointments(int userID)
         {
-            return ctx.Doctors.Include(c => c.Appointments).OrderBy(c => c.IdDoctor).ToList();
+            //return ctx.Doctors.Include(c => c.Appointments).OrderBy(c => c.IdDoctor).ToList();
+            
+
+            return ctx.Appointments.Select(a =>
+                new Appointment()
+                {
+                    namePatient = a.IdPatientNavigation.NamePatient
+
+                }
+
+                 ).Where(a=> a.IdDoctor == userID).ToList();
+
+
+
         }
 
         public void Refresh(int idDoctor, Doctor refreshDoctor)

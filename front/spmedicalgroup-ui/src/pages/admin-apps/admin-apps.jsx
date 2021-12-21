@@ -30,7 +30,7 @@ export default function ManageApps() {
     }
 
     function listPatients() {
-        axios('http://localhost:5000/api/patient', {
+        axios('http://localhost:5000/api/Patient', {
             headers: { 'Authorization': 'Bearer ' + localStorage.getItem('user-login') }
         }).then((answer) => {
             if (answer.status === 200) {
@@ -40,7 +40,7 @@ export default function ManageApps() {
     }
 
     function listDoctors() {
-        axios('http://localhost:5000/api/doctor', {
+        axios('http://localhost:5000/api/Doctor', {
             headers: { 'Authorization': 'Bearer ' + localStorage.getItem('user-login') }
         }).then((answer) => {
             if (answer.status === 200) {
@@ -50,7 +50,7 @@ export default function ManageApps() {
     }
 
     function listApps() {
-        axios('http://localhost:5000/api/appointment', {
+        axios('http://localhost:5000/api/Appointment', {
             headers: { 'Authorization': 'Bearer ' + localStorage.getItem('usuario-login') }
         }).then(answer => {
             if (answer.status === 200) {
@@ -63,7 +63,7 @@ export default function ManageApps() {
     function registerApps(event) {
         event.preventDefault();
         setisLoading(true);
-        axios.post('http://localhost:5000/api/appointment', {
+        axios.post('http://localhost:5000/api/Appointment', {
             idPatient: idPatient,
             idDoctor: idDoctor,
             idSituation: idSituation,
@@ -87,7 +87,7 @@ export default function ManageApps() {
 
     function deleteApps(appointment) {
         // console.log(appointment)
-        axios.delete('http://localhost:5000/api/appointment/delete' + appointment.idAppointment, {
+        axios.delete('http://localhost:5000/api/Appointment/delete' + appointment.idAppointment, {
             headers: { 'Authorization': 'Bearer ' + localStorage.getItem('user-login') }
         }).then(answer => {
             if (answer.status === 204) {

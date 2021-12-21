@@ -14,6 +14,8 @@ namespace SPMedicalGroup.Domains
         public DateTime DateAppointment { get; set; }
         public string DescriptionAppointment { get; set; }
 
+        public string namePatient { get; set; }
+
         public virtual Doctor IdDoctorNavigation { get; set; }
         public virtual Patient IdPatientNavigation { get; set; }
         public virtual Situation IdSituationNavigation { get; set; }

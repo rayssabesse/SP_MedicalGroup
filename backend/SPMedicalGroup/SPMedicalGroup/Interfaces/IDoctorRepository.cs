@@ -13,6 +13,6 @@ namespace SPMedicalGroup.Interfaces
         void Register (Doctor newDoctor);
         void Refresh (int idDoctor, Doctor refreshDoctor);
         void Delete (int idDoctor);
-        public List<Doctor> ListAppointments();
+        public List<Appointment> ListAppointments();
     }
 }

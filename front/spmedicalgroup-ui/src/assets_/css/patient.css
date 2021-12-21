@@ -26,7 +26,7 @@ body {
     margin-top: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .block_box_line {
@@ -56,36 +56,15 @@ body {
 }
 
 .my_profile_card {
-    height: auto;
-    width: 320px;
-    transition: transform 1.2s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    flex-wrap: wrap;
-    align-self: center;
-    margin-bottom: 70%;
-}
-
-.my_profile_card_front {
     height: 192px;
     width: 320px;
     box-shadow: 0px 4px 60px rgba(161, 175, 174, 0.25);
-}
-
-.my_profile_card_front img {
-    height: 192px;
-    width: 320px;
-}
-
-.my_profile_card_back {
-    height: 192px;
-    width: 320px;
     background-color: #162942;
     border-radius: 30px;
     display: flex;
-    justify-content: center;
+    align-self: center;
     align-items: flex-end;
-    transform: rotateY(180deg);
+    flex-wrap: wrap;
 }
 
 .my_profile_block_info_back {
@@ -95,7 +74,17 @@ body {
     height: auto;
     width: auto;
     align-items: flex-start;
-    margin-right: 160px;
+    margin-left: 20px;
+    align-self: center;
+}
+
+.my_profile_block_info_back_row span {
+    font-family: 'Nunito', sans-serif;
+    color: #f9fbfc;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-left: 5px;
 }
 
 .my_profile_block_info_back a {

@@ -47,10 +47,11 @@ export default function DoctorApps() {
     }
 
     function searchMine() {
-        axios('http://localhost:5000/api/doctor', {
+        axios('http://localhost:5000/api/doctor/appointments', {
             headers: { 'Authorization': 'Bearer ' + localStorage.getItem('user-login') }
         }).then(answer => {
             if (answer.status === 200) {
+                console.log(answer.data);
                 setlistApps(answer.data)
             };
         }).catch(error => console.log(error));
@@ -93,14 +94,21 @@ export default function DoctorApps() {
                         <p1>lista de pacientes</p1>
                         <div className="patients_list_box">
                             {list_Apps.map((appointment) => {
+                                console.log(appointment)
                                 return (
                                     <div key={appointment.idAppointment} id={appointment.idAppointment}>
                                         <div className="patients_list_block">
                                             <div className="patients_list_block_info">
                                                 <div className="patients_list_block_info_txt">
+                                                    <div className="test">
                                                     <a>nome:</a>
-                                                    {/* <span>{appointment.idPatientNavigation.namePatient}</span> */}
+                                                    <span>{(appointment.idPatientNavigation.namePatient)}</span>
+                                                    </div>
+                                                    <div className="test">
                                                     <a>horário:</a>
+                                                    <span>{Intl.DateTimeFormat("pt-br", {hour: 'numeric', minute: 'numeric', hour12:true}).format(new Date(appointment.dateAppointment))}</span>
+                                                    </div>
+                                            
                                                     <textarea className='textarea_doctor' maxLength="1000" onChange={(field) => setDescription(field.target.value)}></textarea>
                                                 </div>
                                                 <button className="description_btn" disabled={description === '' ? 'none' : ''} onClick={() => addDescription(id_Now)}>salvar</button>

@@ -72,7 +72,7 @@ namespace SPMedicalGroup.Controllers
                     }
                     );
             }
-
+                
             try
             {
                 _doctorRepository.Refresh(id, refreshDoctor);
